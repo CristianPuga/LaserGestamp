@@ -1,0 +1,12 @@
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\bin\Debug\netcoreapp3.1\LaserCutting.Application.deps.json
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\bin\Debug\netcoreapp3.1\LaserCutting.Application.dll
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\bin\Debug\netcoreapp3.1\LaserCutting.Application.pdb
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\bin\Debug\netcoreapp3.1\LaserCutting.Models.dll
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\bin\Debug\netcoreapp3.1\LaserCutting.Models.pdb
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\obj\Debug\netcoreapp3.1\LaserCutting.Application.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\obj\Debug\netcoreapp3.1\LaserCutting.Application.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\obj\Debug\netcoreapp3.1\LaserCutting.Application.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\obj\Debug\netcoreapp3.1\LaserCutting.Application.AssemblyInfo.cs
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\obj\Debug\netcoreapp3.1\LaserCutting.Application.csproj.CopyComplete
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\obj\Debug\netcoreapp3.1\LaserCutting.Application.dll
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Application\obj\Debug\netcoreapp3.1\LaserCutting.Application.pdb

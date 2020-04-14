@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LaserCutting</name>
+    </assembly>
+    <members>
+        <member name="M:LaserCutting.Controllers.TokenController.Post(LaserCutting.Models.User)">
+            <summary>
+            Post an user to get token
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /api/token
+                {
+                   "username": "Gestamp",
+                   "password": "Gestamp2020"
+                }
+                
+            </remarks>
+            <param name="_userData"></param>
+            <returns>A token</returns>
+            <response code="200">Returns the token</response>
+            <response code="401">If the user is null</response>   
+        </member>
+    </members>
+</doc>
