@@ -26,7 +26,6 @@ namespace LaserCutting
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
