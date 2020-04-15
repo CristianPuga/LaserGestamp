@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using LaserCutting.Application.DTOs;
 using LaserCutting.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -14,20 +16,31 @@ namespace LaserCutting.Controllers
     [ApiController]
     public class UsuariosController : ControllerBase
     {
+        private readonly IMapper _mapper;
+
+        public UsuariosController(IMapper mapper)
+        {
+            _mapper = mapper;
+        }
 
         [HttpGet]
-        public ActionResult<IEnumerable<User>> GetUsuarios()
+        public ActionResult<IEnumerable<UserDTO>> GetUsuarios()
         {
-            List<User> user = new List<User>();
+            User user = new User()
+            {
+                Id = 1,
+                Username = "crank arm",
+                Password = "1234",
+                Email = "Juan@gmail.com",
+                Job = "Director",
+                Role = "Administrator",
+                Token = "hjuksfhuususuifsuifduifhsdu"
+            };
 
-            // Add parts to the list.
-            user.Add(new User() { Id = 1,  Username = "crank arm", Password = "1234" });
-            user.Add(new User() { Id = 2, Username = "crank arm", Password = "1234" });
-            user.Add(new User() { Id = 3, Username = "crank arm", Password = "1234" });
-            user.Add(new User() { Id = 4, Username = "crank arm", Password = "1234" });
-            user.Add(new User() { Id = 5, Username = "crank arm", Password = "1234" });
-            user.Add(new User() { Id = 6, Username = "crank arm", Password = "1234" });
-            return Ok(user);
+
+            var mapping = _mapper.Map<UserDTO>(user);
+
+            return Ok(mapping);
         }
     }
 }

@@ -10,6 +10,7 @@ using LaserCutting.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
 namespace LaserCutting.Controllers
@@ -21,11 +22,13 @@ namespace LaserCutting.Controllers
     {
         public IConfiguration _configuration;
         private readonly ITokenService _tokenService;
+        private readonly ILogger<TokenController> _logger;
 
-        public TokenController(ITokenService tokenService, IConfiguration Configuration)
+        public TokenController(ITokenService tokenService, IConfiguration Configuration, ILogger<TokenController> logger)
         {
             _tokenService = tokenService;
             _configuration = Configuration;
+            _logger = logger;
         }
 
         /// <summary>
@@ -79,6 +82,7 @@ namespace LaserCutting.Controllers
                     var token = new JwtSecurityToken(_configuration["Jwt:Issuer"], _configuration["Jwt:Audience"], claims, expires: DateTime.UtcNow.AddDays(1), signingCredentials: signIn);
 
                     Console.WriteLine("Usuario Correcto, generando token...");
+                    _logger.LogInformation("Token generado correctamente");
                     return Ok(new
                     {
                         token = new JwtSecurityTokenHandler().WriteToken(token)

@@ -1,0 +1,5 @@
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Infraestructure\bin\Debug\netcoreapp3.1\LaserCutting.Infraestructure.deps.json
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Infraestructure\bin\Debug\netcoreapp3.1\LaserCutting.Infraestructure.dll
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Infraestructure\obj\Debug\netcoreapp3.1\LaserCutting.Infraestructure.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Infraestructure\obj\Debug\netcoreapp3.1\LaserCutting.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\GitHub\LaserGestamp\LaserCutting.Infraestructure\obj\Debug\netcoreapp3.1\LaserCutting.Infraestructure.AssemblyInfo.cs
