@@ -81,8 +81,8 @@ namespace LaserCutting
                 c.IncludeXmlComments(xmlPath);
             });
 
-            services.AddTransient<ITokenRepository, TokenRepository>();
-            services.AddTransient<ITokenService, TokenService>();
+            services.AddScoped<ITokenRepository, TokenRepository>();
+            services.AddScoped<ITokenService, TokenService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,6 +92,8 @@ namespace LaserCutting
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAuthentication();
 
             app.UseSwagger();
 

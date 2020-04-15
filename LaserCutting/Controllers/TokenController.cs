@@ -29,7 +29,7 @@ namespace LaserCutting.Controllers
         }
 
         /// <summary>
-        /// Post an user to get token
+        /// Post a user to get token
         /// </summary>
         /// <remarks>
         /// Sample request:
@@ -44,16 +44,14 @@ namespace LaserCutting.Controllers
         /// <param name="_userData"></param>
         /// <returns>A token</returns>
         /// <response code="200">Returns the token</response>
-        /// <response code="401">If the user is null</response>   
+        /// <response code="401">If the user is null</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public ActionResult<string> Post([FromBody] User _userData)
         {
-            Console.WriteLine(_userData.Username);
-            Console.WriteLine(_userData.Password);
-            var prueba = _tokenService.Authenticate(_userData.Username, _userData.Password);
-            if (prueba == null)
+            var login = _tokenService.Authenticate(_userData.Username, _userData.Password);
+            if (login == null)
             {
                 Console.WriteLine("Comprobando...");
                 return Unauthorized(new { message = "Username or password is incorrect" });
@@ -62,8 +60,6 @@ namespace LaserCutting.Controllers
             if (_userData != null && _userData.Username != null && _userData.Password != null)
             {
                 var user = _tokenService.Authenticate(_userData.Username, _userData.Password);
-                Console.WriteLine(user.Username);
-                Console.WriteLine(user.Password);
 
                 if (user != null)
                 {
@@ -86,7 +82,6 @@ namespace LaserCutting.Controllers
                     return Ok(new
                     {
                         token = new JwtSecurityTokenHandler().WriteToken(token)
-
                     });
                 }
                 else
